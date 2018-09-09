@@ -37,6 +37,7 @@ export default class ConfirmationCodeInput extends Component {
       'web-search',
       'visible-password',
     ]),
+    selectionColor: PropTypes.string,
   };
   
   static defaultProps = {
@@ -52,6 +53,7 @@ export default class ConfirmationCodeInput extends Component {
     compareWithCode: '',
     ignoreCase: false,
     keyboardType: 'name-phone-pad',
+    selectionColor: 'rgba(255, 255, 255, 1)',
   };
   
   constructor(props) {
@@ -255,7 +257,8 @@ export default class ConfirmationCodeInput extends Component {
       className,
       size,
       activeColor,
-      keyboardType
+      keyboardType,
+      selectionColor,
     } = this.props;
     
     const initialCodeInputStyle = {
@@ -277,7 +280,7 @@ export default class ConfirmationCodeInput extends Component {
             codeInputStyle
           ]}
           underlineColorAndroid="transparent"
-          selectionColor={activeColor}
+          selectionColor={selectionColor}
           keyboardType={keyboardType}
           returnKeyType={'done'}
           {...this.props}
@@ -290,7 +293,7 @@ export default class ConfirmationCodeInput extends Component {
         />
       )
     }
-    
+
     return (
       <View style={[styles.container, this._getContainerStyle(size, inputPosition), containerStyle]}>
         {codeInputs}
