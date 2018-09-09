@@ -88,6 +88,7 @@ Prop       | Type    | Default    | Description
 `cellBorderWidth`   | number   | 1.0          | width of cell borders
 `activeColor`       | string   | `rgba(255, 255, 255, 1)`   | color of cells when active
 `inactiveColor`     | string   | `rgba(255, 255, 255, 0.2)` | color of cells when inactive
+`selectionColor`    | string   | `rgba(255, 255, 255, 1)` | color of cursor and selected text
 `ignoreCase`        | boolean  | `false`      | ignore case when checking code
 `autoFocus`         | boolean  | `true`       | auto focus on code input
 `codeInputStyle`    | style object   |        | custom style for code input
